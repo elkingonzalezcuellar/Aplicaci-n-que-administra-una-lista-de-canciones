@@ -9,8 +9,15 @@ public class ClasePrincipal {
         //Song one = new Song();
         SongsLibrary principalLibrary = new SongsLibrary();
         principalLibrary.storeObjects();
+        //System.out.println(principalLibrary.showObjects());
+
+        SortSongs filtro1 = new SortSongs();
+
+        filtro1.filterByDate(principalLibrary.showObjects());
         System.out.println(principalLibrary.showObjects());
 
+        //filtro1.filterByYear(principalLibrary.showObjects());
+        //System.out.println(principalLibrary.showObjects());
         //System.out.println("Canción "+song1.getId()+"\n"+principalLibrary.getColletionSong());
     }
 
