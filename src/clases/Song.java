@@ -12,20 +12,51 @@ import java.util.Date;
  */
 public class Song {
 
-    private String title, coverPage, description;
+    private String title, coverPage, description, duration, artist, gender;
     private int id;
-
-    private enum gender {
-        salsa, merengue, guaracha, vallenato, popular, reggaeton, rock, metal,
-        pop, bachata
-    };
     private Date date;
+
+    public Song() {
+    }
+
+    public Song(String artist, String title, String coverPage, String description, String gender, String duration, int id, Date date) {
+        this.title = title;
+        this.coverPage = coverPage;
+        this.description = description;
+        this.gender = gender;
+        this.duration = duration;
+        this.id = id;
+        this.date = date;
+        this.artist = artist;
+    }
+
+    @Override
+
+    public String toString() {
+        return "\n" + "Artista: " + artist
+                + " | Titulo: " + title
+                + " | Caratula: " + coverPage
+                + " | Descripción: " + description
+                + " | Duración: " + duration
+                + " | Genero: " + gender
+                + " | Identificador: " + id
+                + " | Fecha: " + date
+                + "\n";
+    }
 
     /**
      * @return the title
      */
     public String getTitle() {
         return title;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
     /**
