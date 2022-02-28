@@ -1,17 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package clases;
 
 import java.util.Comparator;
 
 /**
+ * [Clase que compara dos objetos de tipo Song]
  *
- * @author PC
+ * @version [1.00.000 2022-02-23
+ * @author [Elkin Estiven González Cuellar -
+ * elkin.gonzalez-c@mail.escuelaing.edu.co ]
+ * @since [1.00.000]
+ *
  */
 public class CompareSongs implements Comparator<Song> {
 
+    /**
+     * Metodo que compara por fecha.
+     *
+     * @return int -1 si es menor , 0 si es igual , 1 si es mayor
+     * @author [Elkin Estiven González Cuellar]
+     * @param s1 Canción 1 para comparar
+     * @param s2 Canción 1 para comparar
+     * @since [1.00.000]
+     *
+     */
     @Override
     public int compare(Song s1, Song s2) {
         if (s1.getDate().compareTo(s2.getDate()) < 0) {

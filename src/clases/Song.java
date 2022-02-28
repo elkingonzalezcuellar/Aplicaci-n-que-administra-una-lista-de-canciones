@@ -141,9 +141,9 @@ public class Song implements Comparable<Song> {
 
     @Override
     public int compareTo(Song e) {
-     if (e.getDuration() < e.getDuration()) {
+     if (e.getDuration() > duration) {
             return -1;
-        } else if (e.getDuration() < e.getDuration()) {
+        } else if (e.getDuration() > duration) {
             return 0;
         } else {
             return 1;
