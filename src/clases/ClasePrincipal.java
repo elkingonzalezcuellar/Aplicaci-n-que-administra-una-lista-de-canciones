@@ -2,9 +2,18 @@ package clases;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * [Clase encargada de la ejecución del programa]
+ * @version [1.00.001 2022-04-23
+ * @author [Elkin Estiven González Cuellar - Juan Esteban Ramirez Reyes
+ * elkin.gonzalez-c@mail.escuelaing.edu.co - ramirezjuan9806@gmail.com]
+ * @since [1.00.000]
+ *
+ */
+
 public class ClasePrincipal {
-    PlayList playList=new PlayList();
-    SongsLibrary principalLibrary = new SongsLibrary();
+    public PlayList playList=new PlayList();
+    public SongsLibrary principalLibrary = new SongsLibrary();
 
     public static void main(String[] args) {
         ClasePrincipal claseP=new ClasePrincipal();
@@ -24,7 +33,7 @@ public class ClasePrincipal {
         /**
          * Variable correspondiente al numero de opcion escogida por el usuario
          */
-        int selection = 0;
+        int selection;
         try{
             do {
                 do {
@@ -74,7 +83,7 @@ public class ClasePrincipal {
         /**
          * Variable correspondiente al numero de opcion escogida por el usuario
          */
-        int selection = 0;
+        int selection ;
         try{
             do {
                 do {
@@ -149,7 +158,7 @@ public class ClasePrincipal {
         /**
          * Variable correspondiente al numero de opcion escogida por el usuario
          */
-        int selection = 0;
+        int selection;
         try{
             do {
                 do {

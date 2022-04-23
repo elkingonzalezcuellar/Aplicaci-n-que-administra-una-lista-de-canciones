@@ -21,11 +21,12 @@ public class PlayList extends SongsLibrary implements Isong {
     private String name;
     private Scanner in = new Scanner(System.in);
     private boolean exit=false;
-    private int isong,option;
+    private int isong;
+    private int option;
     /**
      * Array que se usara para guardar los objetos de tipo Song que tendra la playlist
      */
-    private ArrayList<Song> collectionPlaylist = new ArrayList<Song>();
+    private ArrayList<Song> collectionPlaylist = new ArrayList< >();
 
     /**
      * Sobre escritura de la clase obligatoria de la interfaz Isong
@@ -93,7 +94,8 @@ public class PlayList extends SongsLibrary implements Isong {
     }
 
     /**
-     * Metodos generales de una Playlist
+     * Metodos generales de una Playlist, aplicación de conceptos e implementaciones de
+     * funciones posiblemente requeridas en actualizaciones
      * @since [1.00.000]
      */
     public void nextSong() {

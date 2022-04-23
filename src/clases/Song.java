@@ -17,7 +17,11 @@ import java.util.Date;
  */
 public class Song implements Comparable<Song>{
 
-    private String title, coverPage, description, artist, gender;
+    private String title;
+    private String coverPage;
+    private String description;
+    private String artist;
+    private String gender;
     private int id;
     private double duration;
     private Date date;
