@@ -18,14 +18,14 @@ import java.util.ArrayList;
  */
 public abstract class Library {
 
-    private int Size;
-    private ArrayList collection = new ArrayList(Size);
+    private int size;
+    private ArrayList collection = new ArrayList(size);
 
     public Library() {
     }
 
-    public Library(int Size, ArrayList collection) {
-        this.Size = Size;
+    public Library(int size, ArrayList collection) {
+        this.size = size;
         this.collection = collection;
     }
 
@@ -43,11 +43,11 @@ public abstract class Library {
      * @return
      */
     public int getSize() {
-        return Size;
+        return size;
     }
 
-    public void setSize(int Size) {
-        this.Size = Size;
+    public void setSize(int size) {
+        this.size = size;
     }
 
     public ArrayList getCollection() {

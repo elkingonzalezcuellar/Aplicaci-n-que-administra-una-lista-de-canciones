@@ -13,12 +13,13 @@ import java.util.Date;
 
 public class SongsLibrary extends Library implements Isong  {
 
-    private ArrayList<Song> collectionSong = new ArrayList<Song>();
+    private ArrayList<Song> collectionSong = new ArrayList< >();
 
     public SongsLibrary() {
+        super();
     }
 
-    public SongsLibrary(int Size, ArrayList<Song> collectionSong) {
+    public SongsLibrary( ArrayList<Song> collectionSong) {
         this.collectionSong = collectionSong;
     }
 
