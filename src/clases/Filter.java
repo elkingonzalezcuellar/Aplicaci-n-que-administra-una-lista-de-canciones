@@ -95,4 +95,8 @@ public class Filter {
         }
         System.out.println(collectionFilter);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main

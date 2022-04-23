@@ -61,16 +61,17 @@ public class PlayList extends SongsLibrary implements Isong {
     public void newPlayList() {
         SongsLibrary principalLibrary = new SongsLibrary();
         principalLibrary.storeObjects();
-        System.out.println("Ingrese el nombre de la playlist");
+
+        System.out.println("--Ingrese el nombre de la playlist");
         setName(in.nextLine());
-        System.out.println(" Ingrese el identificador de cada cancion que quiere en la playlist");
+        System.out.println("♠ Ingrese el identificador de cada cancion que quiere en la playlist");
         isong= (in.nextInt())-1;
         collectionPlaylist.add((Song) principalLibrary.getCollectionSong().get(isong));
         do{
-            System.out.println(" Quiere agregar otra cancion a la playlist? \n 1) Si \n 2) No");
+            System.out.println("¿Quiere agregar otra cancion a la playlist? \n 1) Si \n 2) No");
             option=in.nextInt();
             if (option==1){
-                System.out.println(" Ingrese el identificador de cada cancion que quiere en la playlist");
+                System.out.println("♠ Ingrese el identificador de cada cancion que quiere en la playlist");
                 isong= (in.nextInt())-1;
                 collectionPlaylist.add((Song) principalLibrary.getCollectionSong().get(isong));
             }else if (option==2){
@@ -107,4 +108,6 @@ public class PlayList extends SongsLibrary implements Isong {
     public void previousSong() {
     }
 
+
 }
+

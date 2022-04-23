@@ -5,6 +5,13 @@
 package clases;
 
 /**
+<<<<<<< HEAD
+ *
+ * @author PC
+ */
+public interface Isong  {
+
+=======
  * [Interfaz que implementa el un atributo de una cancion]
  *
  * @version [1.00.000 2022-02-27
@@ -14,5 +21,6 @@ package clases;
  *
  */
 public interface Isong  {
+>>>>>>> main
     void play();
 }

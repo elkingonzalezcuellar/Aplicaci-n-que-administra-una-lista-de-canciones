@@ -32,4 +32,6 @@ public class CompareSongs implements Comparator<Song>{
             return 1;
         }
     }
+<<<<<<< HEAD
 }
+

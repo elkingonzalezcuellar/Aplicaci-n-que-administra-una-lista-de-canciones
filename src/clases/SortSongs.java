@@ -26,7 +26,10 @@ public class SortSongs {
      * @see [ información relevante
      * <a href="https://docs.oracle.com/javase/7/docs/api/.html#@see">javadoc
      * - The Java API Documentation Generator</a>]
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
      *
      */
     public void sortByDate(ArrayList songs) {
@@ -46,11 +49,16 @@ public class SortSongs {
      * @see [ información relevante
      * <a href="https://docs.oracle.com/javase/7/docs/api/.html#@see">javadoc
      * - The Java API Documentation Generator</a>]
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
      *
      */
     public void sortByDuration(ArrayList songs) {
         Collections.sort(songs);
     }
 
+
 }
+

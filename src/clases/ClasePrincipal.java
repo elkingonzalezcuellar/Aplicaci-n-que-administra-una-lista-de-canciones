@@ -2,22 +2,13 @@ package clases;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/**
- * [Clase encargada de la ejecución del programa]
- * @version [1.00.001 2022-04-23
- * @author [Elkin Estiven González Cuellar - Juan Esteban Ramirez Reyes
- * elkin.gonzalez-c@mail.escuelaing.edu.co - ramirezjuan9806@gmail.com]
- * @since [1.00.000]
- *
- */
-
 public class ClasePrincipal {
-    public PlayList playList=new PlayList();
-    public SongsLibrary principalLibrary = new SongsLibrary();
+    PlayList playList=new PlayList();
 
+    static SongsLibrary principalLibrary = new SongsLibrary();
     public static void main(String[] args) {
         ClasePrincipal claseP=new ClasePrincipal();
-
+        principalLibrary.storeObjects();
         claseP.mainMenu();
     }
     /**
@@ -33,7 +24,7 @@ public class ClasePrincipal {
         /**
          * Variable correspondiente al numero de opcion escogida por el usuario
          */
-        int selection;
+        int selection = 0;
         try{
             do {
                 do {
@@ -54,16 +45,29 @@ public class ClasePrincipal {
                 } while (flag == 0);
 
                 if (selection == 1) {
-                    System.out.println("BIBLIOTECA PRINCIPAL");
-                    principalLibrary.storeObjects();
+
+                    System.out.println("/*\n" +
+
+                            "xxxxxxxxxxx   xxxxxxxxxx  xxxxxxxxxxx   xx      xxxxxxxxxx   xxxxxxx   xxxxxxxxxx xxxxxxxx    xxxxxxxx  xxxxxxxxx\n" +
+                            "xx        xx      xx      xx        xx  xx          xx     xxx     xxx     xx     x          xx         xx     xx\n" +
+                            "xx        xx      xx      xx          x xx          xx    x           xx   xx     x        x            xx     xx\n" +
+                            "xx       xx       xx      xx         xx xx          xx    x            x   xx     x        x            xx     xx\n" +
+                            "xxxxxxxxxxx       xx      xxxxxxxxxxxx  xx          xx    x            x   xx     xxxxxxxx x            xxxxxxxxx\n" +
+                            "xx        xx      xx      xx         xx xx          xx    xx           x   xx     x        x            xx     xx\n" +
+                            "xx        xx      xx      xx        xxx xx          xx      xx       xx    xx     x         xx          xx     xx\n" +
+                            "xxxxxxxxxxx   xxxxxxxxxx  xxxxxxxxxxxx  xxxxxxxx xxxxxxxxxx  xxxxxxxxx     xx     xxxxxxxxx  xxxxxxxxx  xx     xx\n");
+                    //principalLibrary.storeObjects();
                     System.out.println(principalLibrary.showObjects());
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     subMenu();
                 } else if (selection == 2) {
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-                    System.out.println("¡Gracias!, vuelva pronto.");
+
+                    System.out.println("Cerrando programa...");
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     flag = 2;
+                    System.exit(0);
+
                 }
             } while (flag != 2);
         }catch (InputMismatchException exception) {
@@ -83,7 +87,7 @@ public class ClasePrincipal {
         /**
          * Variable correspondiente al numero de opcion escogida por el usuario
          */
-        int selection ;
+        int selection = 0;
         try{
             do {
                 do {
@@ -95,7 +99,8 @@ public class ClasePrincipal {
                     System.out.println("    3. Filtrar por Genero.");
                     System.out.println("    4. Ordenar por Fecha.");
                     System.out.println("    5. Ordenar por Duración.");
-                    System.out.println("    6. Salir.");
+
+                    System.out.println("    6. Volver al menú principal.");
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     selection = in.nextInt();
 
@@ -137,9 +142,8 @@ public class ClasePrincipal {
                     System.out.println(principalLibrary.showObjects());
 
                 }else if(selection == 6){
-                    System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-                    System.out.println("¡Gracias!, vuelva pronto.");
-                    System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+                    mainMenu();
                     flag = 2;
                 }
             } while (flag != 2);
@@ -158,7 +162,7 @@ public class ClasePrincipal {
         /**
          * Variable correspondiente al numero de opcion escogida por el usuario
          */
-        int selection;
+        int selection = 0;
         try{
             do {
                 do {
@@ -169,7 +173,9 @@ public class ClasePrincipal {
                     System.out.println("    2. Filtrar por Genero.");
                     System.out.println("    3. Ordenar por Fecha.");
                     System.out.println("    4. Ordenar por Duración.");
-                    System.out.println("    5. Salir.");
+
+                    System.out.println("    5. Devolverse al menu anterior.");
+
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     selection = in.nextInt();
 
@@ -201,9 +207,22 @@ public class ClasePrincipal {
                     System.out.println(playList.getCollectionPlaylist());
                 }else if(selection == 5){
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-                    System.out.println("¡Gracias!, vuelva pronto.");
+
+                    System.out.println("/*\n" +
+
+                            "xxxxxxxxxxx   xxxxxxxxxx  xxxxxxxxxxx   xx      xxxxxxxxxx   xxxxxxx   xxxxxxxxxx xxxxxxxx    xxxxxxxx  xxxxxxxxx\n" +
+                            "xx        xx      xx      xx        xx  xx          xx     xxx     xxx     xx     x          xx         xx     xx\n" +
+                            "xx        xx      xx      xx          x xx          xx    x           xx   xx     x        x            xx     xx\n" +
+                            "xx       xx       xx      xx         xx xx          xx    x            x   xx     x        x            xx     xx\n" +
+                            "xxxxxxxxxxx       xx      xxxxxxxxxxxx  xx          xx    x            x   xx     xxxxxxxx x            xxxxxxxxx\n" +
+                            "xx        xx      xx      xx         xx xx          xx    xx           x   xx     x        x            xx     xx\n" +
+                            "xx        xx      xx      xx        xxx xx          xx      xx       xx    xx     x         xx          xx     xx\n" +
+                            "xxxxxxxxxxx   xxxxxxxxxx  xxxxxxxxxxxx  xxxxxxxx xxxxxxxxxx  xxxxxxxxx     xx     xxxxxxxxx  xxxxxxxxx  xx     xx\n");
+                    System.out.println(principalLibrary.showObjects());
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     flag = 2;
+                    subMenu();
+
                 }
             } while (flag != 2);
         }catch (InputMismatchException exception) {
@@ -214,3 +233,4 @@ public class ClasePrincipal {
     }
 
 }
+
