@@ -1,18 +1,15 @@
 package clases;
-
 import java.util.Comparator;
-
 /**
  * [Clase que compara dos objetos de tipo Song]
  *
- * @version [1.00.000 2022-02-23
- * @author [Elkin Estiven González Cuellar -
- * elkin.gonzalez-c@mail.escuelaing.edu.co ]
+ * @version [1.00.000 2022-02-27
+ * @author [Elkin Estiven González Cuellar - Juan Esteban Ramirez Reyes
+ * elkin.gonzalez-c@mail.escuelaing.edu.co - ramirezjuan9806@gmail.com]
  * @since [1.00.000]
  *
  */
-public class CompareSongs implements Comparator<Song> {
-
+public class CompareSongs implements Comparator<Song>{
     /**
      * Metodo que compara por fecha.
      *
@@ -20,6 +17,7 @@ public class CompareSongs implements Comparator<Song> {
      * @author [Elkin Estiven González Cuellar]
      * @param s1 Canción 1 para comparar
      * @param s2 Canción 1 para comparar
+     * @see https://docs.oracle.com/javase/7/docs/api/
      * @since [1.00.000]
      *
      */
