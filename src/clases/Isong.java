@@ -5,10 +5,22 @@
 package clases;
 
 /**
+<<<<<<< HEAD
  *
  * @author PC
  */
 public interface Isong  {
 
+=======
+ * [Interfaz que implementa el un atributo de una cancion]
+ *
+ * @version [1.00.000 2022-02-27
+ * @author [Elkin Estiven González Cuellar - Juan Esteban Ramirez Reyes
+ * elkin.gonzalez-c@mail.escuelaing.edu.co - ramirezjuan9806@gmail.com]
+ * @since [1.00.000]
+ *
+ */
+public interface Isong  {
+>>>>>>> main
     void play();
 }

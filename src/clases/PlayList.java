@@ -60,6 +60,7 @@ public class PlayList extends SongsLibrary implements Isong {
     public void newPlayList() {
         SongsLibrary principalLibrary = new SongsLibrary();
         principalLibrary.storeObjects();
+
         System.out.println("--Ingrese el nombre de la playlist");
         setName(in.nextLine());
         System.out.println("♠ Ingrese el identificador de cada cancion que quiere en la playlist");
@@ -105,4 +106,6 @@ public class PlayList extends SongsLibrary implements Isong {
     public void previousSong() {
     }
 
+
 }
+

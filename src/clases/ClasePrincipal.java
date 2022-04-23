@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class ClasePrincipal {
     PlayList playList=new PlayList();
+
     static SongsLibrary principalLibrary = new SongsLibrary();
-
-
     public static void main(String[] args) {
         ClasePrincipal claseP=new ClasePrincipal();
         principalLibrary.storeObjects();
@@ -46,6 +45,7 @@ public class ClasePrincipal {
                 } while (flag == 0);
 
                 if (selection == 1) {
+
                     System.out.println("/*\n" +
 
                             "xxxxxxxxxxx   xxxxxxxxxx  xxxxxxxxxxx   xx      xxxxxxxxxx   xxxxxxx   xxxxxxxxxx xxxxxxxx    xxxxxxxx  xxxxxxxxx\n" +
@@ -62,10 +62,12 @@ public class ClasePrincipal {
                     subMenu();
                 } else if (selection == 2) {
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
                     System.out.println("Cerrando programa...");
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     flag = 2;
                     System.exit(0);
+
                 }
             } while (flag != 2);
         }catch (InputMismatchException exception) {
@@ -97,9 +99,11 @@ public class ClasePrincipal {
                     System.out.println("    3. Filtrar por Genero.");
                     System.out.println("    4. Ordenar por Fecha.");
                     System.out.println("    5. Ordenar por Duración.");
+
                     System.out.println("    6. Volver al menú principal.");
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     selection = in.nextInt();
+
                     if (selection >= 1 && selection <= 6) {
                         flag = 1;
                     } else {
@@ -138,6 +142,7 @@ public class ClasePrincipal {
                     System.out.println(principalLibrary.showObjects());
 
                 }else if(selection == 6){
+
                     mainMenu();
                     flag = 2;
                 }
@@ -168,7 +173,9 @@ public class ClasePrincipal {
                     System.out.println("    2. Filtrar por Genero.");
                     System.out.println("    3. Ordenar por Fecha.");
                     System.out.println("    4. Ordenar por Duración.");
+
                     System.out.println("    5. Devolverse al menu anterior.");
+
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     selection = in.nextInt();
 
@@ -200,6 +207,7 @@ public class ClasePrincipal {
                     System.out.println(playList.getCollectionPlaylist());
                 }else if(selection == 5){
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
                     System.out.println("/*\n" +
 
                             "xxxxxxxxxxx   xxxxxxxxxx  xxxxxxxxxxx   xx      xxxxxxxxxx   xxxxxxx   xxxxxxxxxx xxxxxxxx    xxxxxxxx  xxxxxxxxx\n" +
@@ -214,6 +222,7 @@ public class ClasePrincipal {
                     System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                     flag = 2;
                     subMenu();
+
                 }
             } while (flag != 2);
         }catch (InputMismatchException exception) {
@@ -224,3 +233,4 @@ public class ClasePrincipal {
     }
 
 }
+
