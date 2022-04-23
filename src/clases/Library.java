@@ -7,8 +7,14 @@ package clases;
 import java.util.ArrayList;
 
 /**
+ * [Clase abstracta Padre que implementa de manera general atributos y
+ * metodos que modelan el objeto de libreria ]
  *
- * @author PC
+ * @version [1.00.000 2022-02-27
+ * @author [Elkin Estiven González Cuellar - Juan Esteban Ramirez Reyes
+ * elkin.gonzalez-c@mail.escuelaing.edu.co - ramirezjuan9806@gmail.com]
+ * @since [1.00.000]
+ *
  */
 public abstract class Library {
 
@@ -23,10 +29,19 @@ public abstract class Library {
         this.collection = collection;
     }
 
+    /**
+     * Metodo abstracto que se debe implementar en la clase de se herede
+     */
     public abstract void storeObjects();
-
+    /**
+     * Metodo abstracto que se debe implementar en la clase de se herede
+     */
     public abstract ArrayList showObjects();
 
+    /**
+     * getters and setters
+     * @return
+     */
     public int getSize() {
         return Size;
     }

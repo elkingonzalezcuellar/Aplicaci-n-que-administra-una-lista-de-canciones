@@ -7,19 +7,24 @@ package clases;
 import java.util.Date;
 
 /**
+ * [Clase que representa una canción con sus atributos
  *
- * @author PC
+ * @version [1.00.000 2022-02-27
+ * @author [Elkin Estiven González Cuellar - Juan Esteban Ramirez Reyes
+ * elkin.gonzalez-c@mail.escuelaing.edu.co - ramirezjuan9806@gmail.com]
+ * @since [1.00.000]
+ *
  */
-public class Song {
+public class Song implements Comparable<Song>{
 
-    private String title, coverPage, description, duration, artist, gender;
+    private String title, coverPage, description, artist, gender;
     private int id;
+    private double duration;
     private Date date;
-
     public Song() {
     }
 
-    public Song(String artist, String title, String coverPage, String description, String gender, String duration, int id, Date date) {
+    public Song(String artist, String title, String coverPage, String description, String gender, double duration, int id, Date date) {
         this.title = title;
         this.coverPage = coverPage;
         this.description = description;
@@ -30,13 +35,32 @@ public class Song {
         this.artist = artist;
     }
 
-    public String getGender() {
-        return gender;
+    /**
+     * [Compara una canción por duración
+     * @param e objecto canción que se quiere comparar
+     * @author [Elkin Estiven González Cuellar - Juan Esteban Ramirez Reyes
+     * elkin.gonzalez-c@mail.escuelaing.edu.co - ramirezjuan9806@gmail.com]
+     *
+     * @since [1.00.000]
+     *
+     * @see [ información relevante
+     * <a href="https://docs.oracle.com/javase/7/docs/api/.html#@see">javadoc
+     * - The Java API Documentation Generator</a>]
+     *
+     */
+    @Override
+    public int compareTo(Song e) {
+        if (e.getDuration() > duration) {
+            return -1;
+        } else if (e.getDuration() > duration) {
+            return 0;
+        } else {
+            return 1;
+        }
+
     }
 
-
     @Override
-
     public String toString() {
         return "\n" + "Artista: " + artist
                 + " | Titulo: " + title
@@ -56,11 +80,14 @@ public class Song {
         return title;
     }
 
-    public String getDuration() {
+    public double getDuration() {
         return duration;
     }
+    public String getGender() {
+        return gender;
+    }
 
-    public void setDuration(String duration) {
+    public void setDuration(double duration) {
         this.duration = duration;
     }
 
